@@ -6,7 +6,7 @@
 /*   By: kilchenk <kilchenk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 15:05:10 by kilchenk          #+#    #+#             */
-/*   Updated: 2023/08/17 16:51:24 by kilchenk         ###   ########.fr       */
+/*   Updated: 2023/08/24 17:50:00 by kilchenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,10 @@ typedef struct s_data
 	double	ymin;
 	double	xmax;
 	double	ymax;
+	double	juliax;
+	double	juliay;
 	double	color;
-	int		iter;
+	int		iter; 
 	int		fractol;
 	int		loopx;
 	int		loopy;
@@ -62,13 +64,14 @@ typedef struct s_data
 void	maps(void);
 void	start(t_data *mlx, int flag);
 void	run_mandelbort(void);
-int		mandelbrot(t_data *mlx);
+void	run_julia(void);
 void	my_mlx_pixel_put(t_data *data, int x, int y, int color);
+void	run_burningship(void);
+int		mandelbrot(t_data *mlx);
+int		julia(t_data *mlx);
+int		burningship(t_data *mlx);
 int		get_color(long double t, int c);
 int		key(int num, t_data *mlx);
 int		ft_exit(t_data *mlx);
 int		zoom(int num, int x, int y, t_data *mlx);
 #endif
-
-// 	double	juliax;
-// 	double	juliay;

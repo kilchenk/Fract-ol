@@ -6,7 +6,7 @@
 #    By: kilchenk <kilchenk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/18 22:26:39 by kilchenk          #+#    #+#              #
-#    Updated: 2023/08/17 17:05:55 by kilchenk         ###   ########.fr        #
+#    Updated: 2023/08/24 15:51:36 by kilchenk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CC		:= gcc
 CFLAGS	:= -Wall -Wextra -Werror -O3
 
 SRCS	:= src/main.c src/utils.c src/input.c src/mandelbrot.c src/colors.c \
-		src/keys.c
+		src/keys.c src/julia.c src/burningship.c
 
 OBJS	:= $(SRCS:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: kilchenk <kilchenk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 17:03:19 by kilchenk          #+#    #+#             */
-/*   Updated: 2023/08/17 17:02:23 by kilchenk         ###   ########.fr       */
+/*   Updated: 2023/08/24 17:15:44 by kilchenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	maps(void)
 {
 	ft_printf(R"Error-->Usage: ./fractol [fractal]\n"E);
-	ft_printf(R"Fractals :\n1.Mandelbrot\n2.Julia\n3.Burning ship\n"E);
+	ft_printf(R"Fractals :\n1.Mandelbrot\n2.Julia\n3.Burningship\n"E);
 }
 
 void	start(t_data *mlx, int flag)
@@ -27,14 +27,18 @@ void	start(t_data *mlx, int flag)
 		else
 			run_mandelbort();
 	}
-	// if (mlx->fractol == 2)
-	// {
-	// 	if (flag)
-	// 		julia();
-	// 	else
-	// 		run_julia();
-	// }
-	// if (mlx->fractol == 3)
-	// {
-	// 	if (flag)	
+	if (mlx->fractol == 2)
+	{
+		if (flag)
+			julia(mlx);
+		else
+			run_julia();
+	}
+	if (mlx->fractol == 3)
+	{
+		if (flag)
+			burningship(mlx);
+		else
+			run_burningship();
+	}
 }

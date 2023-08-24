@@ -6,7 +6,7 @@
 /*   By: kilchenk <kilchenk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 12:06:53 by kilchenk          #+#    #+#             */
-/*   Updated: 2023/08/17 19:17:33 by kilchenk         ###   ########.fr       */
+/*   Updated: 2023/08/23 12:51:04 by kilchenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,13 +69,21 @@ int	key(int num, t_data *mlx)
 	if (num == 123 || num == 124 || num == 125 || num == 126
 		|| num == 53)
 		moves(num, mlx);
-	if (num == 2)
+	if (num == 49)
 	{
 		if (mlx->color == 3)
 			mlx->color = 0;
 		else
 			mlx->color += 1;
 	}
+	if (num == 0)
+		mlx->juliax -= 0.2;
+	if (num == 1)
+		mlx->juliay += 0.2;
+	if (num == 2)
+		mlx->juliax += 0.2;
+	if (num == 13)
+		mlx->juliay -= 0.2;
 	start(mlx, 1);
 	return (0);
 }
